@@ -1,5 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
-import { FileData } from "../types";
+import { FileData } from "../types.ts";
 
 const getClient = () => {
   const apiKey = process.env.API_KEY;

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BookOpen, Calendar, Clipboard, Check, Sparkles, Send, Upload, File as FileIcon, X, Users, MessageCircle } from 'lucide-react';
-import { SermonInfo, FileData } from './types';
-import { InputGroup } from './components/InputGroup';
-import { generateProposalFromGemini } from './services/geminiService';
+import { SermonInfo, FileData } from './types.ts';
+import { InputGroup } from './components/InputGroup.tsx';
+import { generateProposalFromGemini } from './services/geminiService.ts';
 import ReactMarkdown from 'react-markdown';
 
 // Constants for Dropdowns

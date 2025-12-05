@@ -12,10 +12,20 @@
         font-family: 'Noto Sans KR', sans-serif;
       }
     </style>
+    <script>
+      // Browser polyfill for process.env to prevent runtime crashes
+      window.process = {
+        env: {
+          NODE_ENV: 'development',
+          API_KEY: '' // This will need to be populated during build or runtime configuration
+        }
+      };
+    </script>
   <script type="importmap">
 {
   "imports": {
     "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
     "react/": "https://aistudiocdn.com/react@^19.2.1/",
     "react": "https://aistudiocdn.com/react@^19.2.1",
@@ -27,5 +37,6 @@
 </head>
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
